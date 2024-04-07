@@ -3,9 +3,33 @@
 }
 
 .hw {
+    font-family: "Montserrat", sans-serif;
+
+
+
+}
+.hw::before {
+    display:flex;
+    content:'';
+    width:100%;
+    border:1px solid #D9D9D9;
+
 
 }
 
-.hwTitle {
+.hw::after {
+    content:'';
+    width:100%;
+    border:1px solid #D9D9D9;
+    display:flex;
 
+}
+
+
+.hwTitle {
+    /*margin-top:131px;*/
+    margin:131px 0 10px 70px;
+    font-size:22px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 }
