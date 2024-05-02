@@ -2,10 +2,12 @@
     display: flex;
     gap: 24px;
     margin-bottom: 32px;
+    margin-top: 32px;
 }
 
 .all {
     --color: #06c;
+    margin-left: 50px;
 }
 
 .low {
@@ -22,6 +24,7 @@
 
 .button {
     padding: 5px 15px;
+
 
     background: transparent;
     color: var(--color);
@@ -52,4 +55,6 @@
     gap: 17px;
     flex-wrap: wrap;
     max-width: 450px;
+    margin-left:50px;
+    margin-bottom:73px;
 }

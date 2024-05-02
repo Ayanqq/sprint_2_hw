@@ -5,8 +5,6 @@
 .hw {
     font-family: "Montserrat", sans-serif;
 
-
-
 }
 .hw::before {
     display:flex;

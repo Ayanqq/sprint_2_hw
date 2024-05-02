@@ -1,12 +1,12 @@
 import React from 'react'
 import {pureAddUser} from '../GreetingContainer'
 
-let name: any
-const setName = (a: any) => {
+let name: string
+const setName = (a: string) => {
     name = a
 }
 let error: any
-const setError = (a: any) => {
+const setError = (a: string) => {
     error = a
 }
 let added: any
@@ -23,7 +23,7 @@ beforeEach(() => {
 test('name 1', () => {
     name = '1'
     pureAddUser(name, setError, setName, addUserCallback)
-    expect(name).toBe('')
+    expect(name).toBe('') //-здесь разве пустая строка должна быть ?
     expect(error).toBe('')
     expect(added).toBe(true)
 })
