@@ -12,6 +12,11 @@
 }
 
 .input {
+    padding:10px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size:16px;
+    font-weight:500;
 }
 
 .pen {
