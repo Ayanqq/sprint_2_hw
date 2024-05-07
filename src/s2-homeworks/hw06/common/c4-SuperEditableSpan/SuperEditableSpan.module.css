@@ -1,7 +1,14 @@
 .spanBlock {
+    display:flex;
+    align-items: center;
 }
 
 .span {
+    margin-left:10px;
+    color: #0080FF;
+    font-size:16px;
+    font-weight:500;
+
 }
 
 .input {
