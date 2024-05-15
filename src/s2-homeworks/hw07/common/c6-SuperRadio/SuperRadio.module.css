@@ -1,15 +1,32 @@
 .radio {
+    width:25px;
+    background:red;
+
 }
 
-.radio::before {
+.radio::before input{
+    background:red;
 }
 
 
 .radio:checked::before {
+    background:red;
+    border:50px solid red;
+
 }
 
 .label {
+    display:flex;
+    gap:10px;
+    font-size:16px;
+    text-transform: uppercase;
 }
 
+
 .options {
+    display:flex;
+    flex-direction:column;
+    margin-left:125px;
+    padding-left:15px;
+    gap:20px;
 }
