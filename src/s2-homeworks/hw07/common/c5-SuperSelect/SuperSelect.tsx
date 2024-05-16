@@ -39,6 +39,11 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         if (onChangeOption) {
             onChangeOption(e.currentTarget.value)
         }
+
+        onChange?.(e)
+        onChangeOption?.(e.target.value)
+
+        //какой из этих вариантов верный?
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
