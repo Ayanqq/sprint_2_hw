@@ -36,12 +36,8 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         : [] // map options with key
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        if (onChangeOption) {
-            onChangeOption(e.currentTarget.value)
-        }
-
         onChange?.(e)
-        onChangeOption?.(e.target.value)
+        onChangeOption?.(Number(e.target.value))
 
         //какой из этих вариантов верный?
     }

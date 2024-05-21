@@ -7,39 +7,55 @@ type ActionType =
 export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => { // need to fix any
     switch (action.type) {
         case 'sort': {
-            // by name
-            if (action.payload === 'up') {
-                return state.sort((a, b) => {
-                    let nameA = a.name.toUpperCase();
-                    let nameB = b.name.toUpperCase();
+            const myStateCopy = [...state]
+            return myStateCopy.sort((a, b) => {
+                let nameA = a.name.toUpperCase();
+                let nameB = b.name.toUpperCase();
 
-                    if (nameA < nameB) {
-                        return -1;
-                    }
-                    if (nameA > nameB) {
-                        return 1;
-                    }
+                const isUp = action.payload === 'up'
 
-                    return 0;
-                });
-            }
-            if (action.payload === 'down') {
-                return state.sort((a, b) => {
-                    let nameA = a.name.toUpperCase();
-                    let nameB = b.name.toUpperCase();
+                if (nameA < nameB) {
+                    return  isUp ? -1 : 1  ;
+                }
+                if (nameA > nameB) {
+                    return  isUp ? 1 : -1 ;
+                }
 
-                    if (nameA > nameB) {
-                        return -1;
-                    }
-                    if (nameA < nameB) {
-                        return 1;
-                    }
+                return 0;
+            });
+            // // by name
+            // if (action.payload === 'up') {
+            //     return state.sort((a, b) => {
+            //         let nameA = a.name.toUpperCase();
+            //         let nameB = b.name.toUpperCase();
+            //
+            //         if (nameA < nameB) {
+            //             return -1;
+            //         }
+            //         if (nameA > nameB) {
+            //             return 1;
+            //         }
+            //
+            //         return 0;
+            //     });
+            // }
+            // if (action.payload === 'down') {
+            //     return state.sort((a, b) => {
+            //         let nameA = a.name.toUpperCase();
+            //         let nameB = b.name.toUpperCase();
+            //
+            //         if (nameA > nameB) {
+            //             return -1;
+            //         }
+            //         if (nameA < nameB) {
+            //             return 1;
+            //         }
+            //
+            //         return 0;
+            //     });
+            // }
 
-                    return 0;
-                });
-            }
-
-            return state
+            // return state
             // need to fix
         }
         case 'check': {
