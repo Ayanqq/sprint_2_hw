@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sprint_2_hw/static/css/main.fbfd4f27.css",
-    "main.js": "/sprint_2_hw/static/js/main.6e0f0241.js",
+    "main.css": "/sprint_2_hw/static/css/main.b705f8fa.css",
+    "main.js": "/sprint_2_hw/static/js/main.81ef8b80.js",
     "static/js/787.66cb4309.chunk.js": "/sprint_2_hw/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/sprint_2_hw/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/404.svg": "/sprint_2_hw/static/media/404.dae7af4892f2a3abe805a174178919f2.svg",
@@ -10,12 +10,12 @@
     "index.html": "/sprint_2_hw/index.html",
     "static/media/checked.svg": "/sprint_2_hw/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "static/media/burger.svg": "/sprint_2_hw/static/media/burger.e4e6b98e4ee0b2dfcd76d02a9eed2e34.svg",
-    "main.fbfd4f27.css.map": "/sprint_2_hw/static/css/main.fbfd4f27.css.map",
-    "main.6e0f0241.js.map": "/sprint_2_hw/static/js/main.6e0f0241.js.map",
+    "main.b705f8fa.css.map": "/sprint_2_hw/static/css/main.b705f8fa.css.map",
+    "main.81ef8b80.js.map": "/sprint_2_hw/static/js/main.81ef8b80.js.map",
     "787.66cb4309.chunk.js.map": "/sprint_2_hw/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbfd4f27.css",
-    "static/js/main.6e0f0241.js"
+    "static/css/main.b705f8fa.css",
+    "static/js/main.81ef8b80.js"
   ]
 }
