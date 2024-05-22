@@ -40,8 +40,8 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
             onChangeOption(e.currentTarget.value)
         }
 
-        onChange?.(e)
-        onChangeOption?.(e.target.value)
+        // onChange?.(e)
+        // onChangeOption?.(e.target.value)
 
         //какой из этих вариантов верный?
     }
