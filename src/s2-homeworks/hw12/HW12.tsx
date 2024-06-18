@@ -21,17 +21,16 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-    const themeId = useAppSelector(state => state.theme.themeId)
+    const themeId = useAppSelector(state => state.theme.themeId);
     const dispatch = useDispatch()
 
-    const change = (id: number, themeId:number) => {// дописать функцию
-        if (id === themeId) {
-            dispatch(changeThemeId(id))
-        }
-
+    const change = (themeId: string) => {
+        dispatch(changeThemeId(+themeId));
     }
 
     console.log(themeId)
+
+    const currentTheme = themes.find(theme => +theme.id === +themeId)?.id;
 
     useEffect(() => {
         document.documentElement.dataset.theme = themeId + ''
@@ -47,10 +46,9 @@ const HW12 = () => {
                 <SuperSelect
                     id={'hw12-select-theme'}
                     className={s.select}
-                    value={themes.map(t => t.value)}
-                    onChange={change}
-                    // сделать переключение тем
-
+                    value={currentTheme}
+                    onChangeOption={change}
+                    options={themes}
                 />
             </div>
         </div>
