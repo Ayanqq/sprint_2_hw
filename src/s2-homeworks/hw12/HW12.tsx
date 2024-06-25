@@ -28,7 +28,6 @@ const HW12 = () => {
         dispatch(changeThemeId(+themeId));
     }
 
-    console.log(themeId)
 
     const currentTheme = themes.find(theme => +theme.id === +themeId)?.id;
 

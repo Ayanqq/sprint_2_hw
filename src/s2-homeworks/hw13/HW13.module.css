@@ -1,7 +1,22 @@
 .buttonsContainer {
+    display:flex;
+    gap:25px;
+    padding:25px;
+}
+
+.buttonsContainer button {
+    width: auto;
+    padding:0 25px 0 25px;
 }
 
 .responseContainer {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:1200px;
+    margin-top:80px;
+    margin-left:165px;
+    margin-bottom:80px;
 }
 
 .imageContainer {
@@ -11,12 +26,21 @@
 }
 
 .textContainer{
+    margin-top:15px;
+    width:560px;
 }
 
 .code {
+    font-size:30px;
+    font-weight:500;
 }
 
 .text {
+    font-size:16px;
+    font-weight:500
 }
+
 .info {
+    font-size:16px;
+    font-weight:500
 }
