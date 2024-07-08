@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW14.module.css'
-import axios from 'axios'
+import axios , {AxiosResponse} from 'axios'
 import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
 import {useSearchParams} from 'react-router-dom'
 
@@ -24,6 +24,7 @@ const getTechs = (find: string) => {
         })
 }
 
+
 const HW14 = () => {
     const [find, setFind] = useState('')
     const [isLoading, setLoading] = useState(false)
@@ -35,7 +36,12 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
+                if (res) {
+                    setTechs(res.data.techs)
+                }
+                setLoading(false)
 
+                // console.log(res)
                 // сохранить пришедшие данные
 
                 //
@@ -45,7 +51,7 @@ const HW14 = () => {
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
+        setSearchParams(value)
         // добавить/заменить значение в квери урла
         // setSearchParams(
 
