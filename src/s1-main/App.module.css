@@ -4,6 +4,7 @@
 
 .hw {
     font-family: "Montserrat", sans-serif;
+    margin-left:20px;
 
 }
 .hw::before {
