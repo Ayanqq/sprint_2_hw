@@ -5,6 +5,8 @@ const downIcon = '[\\/]'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
 
+// todo:Импортировать просто картинку иконки в эти переменные ?
+
 export type SuperSortPropsType = {
     id?: string
     sort: string
@@ -13,8 +15,17 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
+
+    // if (sort === down) {
+    //     return down
+    // } else if (sort === up) {
+    //     return down
+    // }
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    console.log(sort)
+
+
+    return down // исправить
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
