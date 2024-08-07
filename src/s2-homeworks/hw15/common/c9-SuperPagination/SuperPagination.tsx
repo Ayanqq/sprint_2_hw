@@ -26,8 +26,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     const onChangeSelect = (event: any) => {
         // пишет студент
-        debugger
-        onChange(2, +event.currentTarget.value)// - но он вообще не вызывается
+        console.log('hello')
+        onChange(2, +event.currentTarget.value) // - но он вообще не вызывается
     }
 
     return (

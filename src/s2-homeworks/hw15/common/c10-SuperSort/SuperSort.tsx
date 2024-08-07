@@ -14,8 +14,11 @@ export type SuperSortPropsType = {
     onChange: (newSort: string) => void
 }
 
+
 export const pureChange = (sort: string, down: string, up: string) => {
 
+
+    // return sort=== down? up : sort === up ? "" : down
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
     console.log('xd')
 
