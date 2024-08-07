@@ -1,35 +1,35 @@
 .tech {
     width: 50vw;
-    border:1px solid red
+    /*border:1px solid red*/
 }
 
 .developer {
-    border:1px solid red
+    /*border:1px solid red*/
 
 }
 
 .techHeader {
     width: 50vw;
-    border:1px solid red
+    /*border:1px solid red*/
 }
 
 .developerHeader {
-    border:1px solid red
+    /*border:1px solid red*/
 
 }
 
 .row {
     display: flex;
-    border:1px solid red
+    /*border:1px solid red*/
 }
 
 .rowHeader {
     display: flex;
-    border:1px solid red;
+    /*border:1px solid red;*/
 
 }
 
 .loading {
-    border:1px solid red
+    /*border:1px solid red*/
 
 }

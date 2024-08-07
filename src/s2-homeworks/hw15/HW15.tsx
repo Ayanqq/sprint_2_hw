@@ -42,7 +42,7 @@ const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
     const [count, setCount] = useState(4)
-    const [idLoading, setLoading] = useState(false)
+    const [idLoading, setLoading] = useState(true)
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
@@ -63,7 +63,8 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
+        setPage(newPage)
+        setCount(newCount)
         // setPage(
         // setCount(
 
@@ -90,6 +91,8 @@ const HW15 = () => {
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
+        // console.log(params)
+        // console.log('useEffect', count)
     }, [])
 
     const mappedTechs = techs.map(t => (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -17,15 +17,17 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
     }
 ) => {
 
-    // console.log(totalCount)
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage = totalCount // пишет студент // вычислить количество страниц
 
     const onChangeCallback = (event: any, page: number) => {
+        onChange(page, event.currentTarget)
         // пишет студент
     }
 
     const onChangeSelect = (event: any) => {
         // пишет студент
+        debugger
+        onChange(2, +event.currentTarget.value)// - но он вообще не вызывается
     }
 
     return (
@@ -35,6 +37,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 sx={{
                     // стили для Pagination // пишет студент
                 }}
+                shape={'rounded'}
+                color={'primary'}
                 page={page}
                 count={lastPage}
                 onChange={onChangeCallback}
@@ -54,7 +58,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 7, value: 7},
                     {id: 10, value: 10},
                 ]}
-                onChange={onChangeSelect}
+                onChange={onChangeSelect} // почему не вызывается ??
             />
 
             <span className={s.text2}>
