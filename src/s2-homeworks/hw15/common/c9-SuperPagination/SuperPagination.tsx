@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react'
+import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
@@ -26,9 +26,10 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     const onChangeSelect = (event: any) => {
         // пишет студент
-        console.log('hello')
-        onChange(2, +event.currentTarget.value) // - но он вообще не вызывается
+        onChange(page, event.currentTarget)
+         // - но он вообще не вызывается
     }
+
 
     return (
         <div className={s.pagination}>

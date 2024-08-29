@@ -1,35 +1,53 @@
 .tech {
-    width: 50vw;
-    /*border:1px solid red*/
+
 }
 
 .developer {
-    /*border:1px solid red*/
+
+}
+
+.developer::first-letter {
+    text-transform: uppercase;
 
 }
 
 .techHeader {
-    width: 50vw;
-    /*border:1px solid red*/
+    font-weight: 600;
+}
+
+.techHeader::first-letter {
+    text-transform: uppercase;
 }
 
 .developerHeader {
-    /*border:1px solid red*/
+    font-weight: 600;
+}
 
+.developerHeader::first-letter{
+    text-transform: uppercase;
 }
 
 .row {
     display: flex;
-    /*border:1px solid red*/
+    max-width:600px;
+    padding:10px;
+    gap:250px;
+    border-bottom: #E5E5E5 1px solid;
+
 }
 
 .rowHeader {
     display: flex;
-    /*border:1px solid red;*/
+    align-items: center;
+    background-color: #E5E5E5;
+    max-width:600px;
+    height:35px;
+    padding:10px;
+    gap:250px;
+
 
 }
 
 .loading {
     /*border:1px solid red*/
-
 }
