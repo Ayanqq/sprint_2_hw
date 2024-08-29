@@ -15,6 +15,8 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
 * */
 
+
+// todo:Прелоадер, иконки, количество страниц
 type TechType = {
     id: number
     tech: string
@@ -72,7 +74,7 @@ const HW15 = () => {
         // setPage(
         // setCount(
         console.log(newCount)
-        sendQuery({page: newPage, count: count})
+        sendQuery({page: newPage, count: newCount})
         setSearchParams({page: newPage.toString(), count:newCount.toString()})
         // sendQuery(
         // setSearchParams(
@@ -123,7 +125,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
 
                 <SuperPagination
