@@ -81,7 +81,6 @@ const HW15 = () => {
 
         //
     }
-
     const onChangeSort = (newSort: string) => {
         // делает студент
 
