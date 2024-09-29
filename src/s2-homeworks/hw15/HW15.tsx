@@ -57,8 +57,9 @@ const HW15 = () => {
             .then((res) => {
                 // делает студент
                 if (res) {
+                    console.log(count)
                     setTechs(res.data.techs)
-                    setTotalCount(res.data.totalCount)
+                    setTotalCount(Math.ceil(res.data.totalCount / count))
                     setLoading(false)
                 }
                 // сохранить пришедшие данные
@@ -88,9 +89,10 @@ const HW15 = () => {
         setPage(1)
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        sendQuery({sort: newSort})
-        setSearchParams({sort: newSort})
+    const {sort, page, ...lastQueries} = Object.fromEntries(searchParams)
+        const newQuery = {...lastQueries, page: '1' ,sort: newSort}
+        sendQuery(newQuery)
+        setSearchParams(newQuery)
         // sendQuery(
         // setSearchParams(
 
@@ -120,7 +122,7 @@ const HW15 = () => {
 
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'}> // position relative
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
